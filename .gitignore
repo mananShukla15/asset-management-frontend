@@ -1,4 +1,1 @@
-/frontend/node_modules/
-/.idea/
-*.Identifier
-
+.vercel
