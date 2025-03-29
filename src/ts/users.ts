@@ -1,16 +1,16 @@
-import fetchUserRoles from '../functions/fetchUserRoles.ts'
-import {IBodyStructureForUserAPI, IUser} from "../functions/interface.ts";
-import {createUserViaAdminApi, deleteUserApi} from "../functions/api.ts";
-import {executeDeleteApi, executePostApi} from "./apiExecution.ts";
-import {createTable} from "./tables.ts";
-import {users} from "../functions/getUsers.ts";
-import {isTokenAvailableOrNot, logout} from "../functions/helperFunctions.ts";
+import fetchUserRoles from '../functions/fetchUserRoles.js'
+import {IBodyStructureForUserAPI, IUser} from "../functions/interface.js";
+import {createUserViaAdminApi, deleteUserApi} from "../functions/api.js";
+import {executeDeleteApi, executePostApi} from "./apiExecution.js";
+import {createTable} from "./tables.js";
+import {users} from "../functions/getUsers.js";
+import {isTokenAvailableOrNot, logout} from "../functions/helperFunctions.js";
 
 isTokenAvailableOrNot()
 const logoutElement: HTMLElement = document.getElementById("logout")!;
 const roles: string[] = await fetchUserRoles();
 if (!roles.includes("Admin")) {
-    location.href = '/src/html/index.html'
+    location.href = '../../index.html'
 }
 displayUsers(users)
 console.log("users",users)

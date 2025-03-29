@@ -1,6 +1,6 @@
-import {IForgetPassword, IForgetPasswordToken} from "../functions/interface.ts";
-import {forgetPasswordApi} from "../functions/api.ts";
-import {executePostApi} from "./apiExecution.ts";
+import {IForgetPassword, IForgetPasswordToken} from "../functions/interface.js";
+import {forgetPasswordApi} from "../functions/api.js";
+import {executePostApi} from "./apiExecution.js";
 
 const commonHeaders  : HeadersInit =  {
     "Content-Type": "application/json",
@@ -8,7 +8,7 @@ const commonHeaders  : HeadersInit =  {
 }
 
 if (localStorage.getItem("token")!=null) {
-    window.location.href = "/src/html/index.html"
+    window.location.href = "../../index.html"
 }
 
 async function postRequest(api:string,body:IForgetPassword): Promise<void>{
@@ -22,7 +22,7 @@ async function postRequest(api:string,body:IForgetPassword): Promise<void>{
     }
     if(data.username){
         localStorage.setItem('username', data.username);
-        window.location.href = "/src/html/resetPassword.html";
+        window.location.href = "../../resetPassword.html";
     }
 }
 

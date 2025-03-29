@@ -1,4 +1,4 @@
-import {headers} from "../functions/api.ts";
+import {headers} from "../functions/api.js";
 
 export async function executeGetApi(api:string,apiHeaders?:any) : Promise<any>{
     const response :Response= await fetch(api, {
@@ -8,7 +8,7 @@ export async function executeGetApi(api:string,apiHeaders?:any) : Promise<any>{
     console.log(data,data);
     if(data.message == "user not found"){
         localStorage.removeItem('token');
-        location.href = "/src/html/login.html";
+        location.href = "../../login.html";
     }
     return [response,data];
 }

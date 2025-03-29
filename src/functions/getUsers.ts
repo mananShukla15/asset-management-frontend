@@ -1,5 +1,5 @@
-import {IUser} from "./interface.ts";
-import {executeGetApi} from "../ts/apiExecution.ts";
-import {getAllUsersApi} from "./api.ts";
+import {IUser} from "./interface.js";
+import {executeGetApi} from "../ts/apiExecution.js";
+import {getAllUsersApi} from "./api.js";
 
 export const users: IUser[] = (await executeGetApi(getAllUsersApi))[1];

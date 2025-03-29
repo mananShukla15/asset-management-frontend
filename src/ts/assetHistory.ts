@@ -1,16 +1,16 @@
-import fetchUserRoles from '../functions/fetchUserRoles.ts'
-import {IAssetHistory} from "../functions/interface.ts";
-import {assetHistoryApi} from "../functions/api.ts";
-import {executeGetApi} from "./apiExecution.ts";
-import {createTable} from "./tables.ts";
-import {emptyFunction, isTokenAvailableOrNot, logout} from "../functions/helperFunctions.ts";
+import fetchUserRoles from '../functions/fetchUserRoles.js'
+import {IAssetHistory} from "../functions/interface.js";
+import {assetHistoryApi} from "../functions/api.js";
+import {executeGetApi} from "./apiExecution.js";
+import {createTable} from "./tables.js";
+import {emptyFunction, isTokenAvailableOrNot, logout} from "../functions/helperFunctions.js";
 
 const logoutElement:HTMLElement = document.getElementById("logout")!;
 
 isTokenAvailableOrNot()
 const roles : string[] = await fetchUserRoles();
 if(!roles.includes("Admin")){
-    location.href = '/src/html/index.html'
+    location.href = '../../index.html'
 }
 
 

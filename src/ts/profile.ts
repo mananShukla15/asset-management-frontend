@@ -1,6 +1,6 @@
-import fetchUserRoles from '../functions/fetchUserRoles.ts';
-import {displayContentBasedOnRoles, isTokenAvailableOrNot, logout} from "../functions/helperFunctions.ts";
-import {profileDetails} from "../functions/getProfileDetails.ts";
+import fetchUserRoles from '../functions/fetchUserRoles.js';
+import {displayContentBasedOnRoles, isTokenAvailableOrNot, logout} from "../functions/helperFunctions.js";
+import {profileDetails} from "../functions/getProfileDetails.js";
 
 const logoutElement:HTMLElement = document.getElementById("logout")!;
 isTokenAvailableOrNot()

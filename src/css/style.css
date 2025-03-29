@@ -36,8 +36,18 @@
 }
 
 #createUser{
-  position: absolute;
+  position: sticky;
   bottom: 5%;
   right: 5%;
   height: 10%;
+  left: 85%;
+}
+
+#createAssets{
+  position: sticky;
+  top: 85%;
+  bottom: 5%;
+  right: 5%;
+  height: 10%;
+  left: 85%;
 }

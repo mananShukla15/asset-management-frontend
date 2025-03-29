@@ -1,12 +1,12 @@
-import {IBodyStructureForUserAPI} from "../functions/interface.ts";
-import {signupApi} from "../functions/api.ts";
-import {executePostApi} from "./apiExecution.ts";
+import {IBodyStructureForUserAPI} from "../functions/interface.js";
+import {signupApi} from "../functions/api.js";
+import {executePostApi} from "./apiExecution.js";
 const commonHeaders  : HeadersInit =  {
     "Content-Type": "application/json",
     "Access-Control-Origin": "*"
 }
 if (localStorage.getItem("token")) {
-    window.location.href = "/src/html/index.html"
+    window.location.href = "../../index.html"
 }
 
 async function postRequest(api:string,body:IBodyStructureForUserAPI):Promise<void>{

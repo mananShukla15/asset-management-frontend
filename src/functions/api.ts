@@ -1,4 +1,6 @@
-const api: string = "http://localhost:5001/";
+import {BACKEND_URL} from "./env.js";
+
+const api: string = BACKEND_URL;
 const userApi:string = api + "users/";
 const assetApi:string =  api + "assets/";
 

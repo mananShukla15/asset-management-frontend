@@ -2,7 +2,7 @@ export function emptyFunction():void{}
 
 export function isTokenAvailableOrNot(){
     if (localStorage.getItem("token") === null || localStorage.getItem("token") === undefined) {
-        window.location.href = "/src/html/login.html";
+        window.location.href = "../../login.html";
     }
 }
 

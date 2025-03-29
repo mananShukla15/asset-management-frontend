@@ -1,8 +1,8 @@
-import {verifyUserViaOtpApi} from "../functions/api.ts";
-import {executePostApi} from "./apiExecution.ts";
+import {verifyUserViaOtpApi} from "../functions/api.js";
+import {executePostApi} from "./apiExecution.js";
 
 if(!localStorage.getItem("OTPtoken")){
-    location.href='../html/register.html'
+    location.href='../../register.html'
 }
 
 async function postRequest(api:string,body: { otp:number }):Promise<void>{
@@ -13,7 +13,7 @@ async function postRequest(api:string,body: { otp:number }):Promise<void>{
     const responseDataArray  = await executePostApi(api,body,apiHeaders);
     if(responseDataArray[0].status>=200 && responseDataArray[0].status < 300){
         alert("user created successfully")
-        window.location.href = "/src/html/login.html";
+        window.location.href = "../../login.html";
     }
     else{
         alert((responseDataArray[1]).message);

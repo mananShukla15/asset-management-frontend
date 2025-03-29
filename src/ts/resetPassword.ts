@@ -1,6 +1,6 @@
-import {IForgetPasswordToken, IResetPassword} from "../functions/interface.ts";
-import {resetPasswordApi} from "../functions/api.ts";
-import {executePostApi} from "./apiExecution.ts";
+import {IForgetPasswordToken, IResetPassword} from "../functions/interface.js";
+import {resetPasswordApi} from "../functions/api.js";
+import {executePostApi} from "./apiExecution.js";
 const commonHeaders  : HeadersInit =  {
     "Content-Type": "application/json",
     "Access-Control-Origin": "*",
@@ -8,11 +8,11 @@ const commonHeaders  : HeadersInit =  {
 }
 
 if (localStorage.getItem("token")!=null) {
-    window.location.href = "/src/html/index.html"
+    window.location.href = "../../index.html"
 }
 
 if(!localStorage.getItem("username")){
-    window.location.href = "/src/html/forgetPassword.html"
+    window.location.href = "../../forgetPassword.html"
 }
 
 async function postRequest(api:string,body:IResetPassword): Promise<void>{
@@ -24,7 +24,7 @@ async function postRequest(api:string,body:IResetPassword): Promise<void>{
         alert(data.message)
         return;
     }else{
-        window.location.href = "/src/html/login.html";
+        window.location.href = "../../login.html";
     }
 }
 

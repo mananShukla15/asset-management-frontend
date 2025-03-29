@@ -1,12 +1,12 @@
-import {IBodyStructureForAPI, ILoginToken} from "../functions/interface.ts";
-import {loginApi} from "../functions/api.ts";
-import {executePostApi} from "./apiExecution.ts";
+import {IBodyStructureForAPI, ILoginToken} from "../functions/interface.js";
+import {loginApi} from "../functions/api.js";
+import {executePostApi} from "./apiExecution.js";
 const commonHeaders  : HeadersInit =  {
     "Content-Type": "application/json",
     "Access-Control-Origin": "*"
 }
 if (localStorage.getItem("token")!=null) {
-    window.location.href = "/src/html/index.html"
+    window.location.href = "../../index.html"
 }
 
 async function postRequest(api:string,body:IBodyStructureForAPI): Promise<void>{
@@ -19,7 +19,7 @@ async function postRequest(api:string,body:IBodyStructureForAPI): Promise<void>{
     }
     if(data.token){
         localStorage.setItem('token', data.token);
-        window.location.href = "/src/html/index.html";
+        window.location.href = "../../index.html";
     }
 }
 const loginForm : HTMLFormElement = <HTMLFormElement>document.getElementById('loginForm');

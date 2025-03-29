@@ -1,5 +1,5 @@
-import {getRolesApi} from "./api.ts";
-import {executeGetApi} from "../ts/apiExecution.ts";
+import {getRolesApi} from "./api.js";
+import {executeGetApi} from "../ts/apiExecution.js";
 
 export default async function fetchUserRoles(): Promise<string[]> {
     const token : string = localStorage.getItem('token')!;

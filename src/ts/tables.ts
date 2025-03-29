@@ -1,6 +1,6 @@
-import {IAssetHistory, IAssetRequest, IUser} from "../functions/interface.ts";
-import {createButtons} from "../functions/createButtons.ts";
-import {profileDetails} from "../functions/getProfileDetails.ts";
+import {IAssetHistory, IAssetRequest, IUser} from "../functions/interface.js";
+import {createButtons} from "../functions/createButtons.js";
+import {profileDetails} from "../functions/getProfileDetails.js";
 
 function isKeyValidOrNot(key:string):boolean{
     return key!='id' && key!='createdAt' && key!='joiningDate' && key!='userId' && key!='assetId';
